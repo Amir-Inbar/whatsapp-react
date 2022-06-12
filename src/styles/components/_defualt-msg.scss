@@ -1,0 +1,20 @@
+.default-msg {
+  background-color: #f7f8fa;
+  padding: 20px 0;
+
+  img {
+    max-width: 250px;
+  }
+
+  .msg-explanation {
+    font-family: $generalfontfamily;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #667781;
+    p {
+      margin-top: 28px;
+      // font-size: 32px;
+    }
+  }
+}

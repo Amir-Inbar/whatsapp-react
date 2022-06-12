@@ -1,0 +1,47 @@
+.chat-keyboard {
+  min-height: 62px;
+  background-color: $background-header;
+  padding: 0 15px 0 15px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  order: 2;
+  .user-keyboard {
+    height: 100%;
+
+    .keyboard-input {
+      // display: inline-block;
+      display: flex;
+      font-family: $generalfontfamily;
+      padding: 7px 12px 11px;
+      margin: 7px 10px;
+      font-size: 15px;
+      font-weight: 400;
+      background-color: #fff;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      word-wrap: break-word;
+      white-space: pre-wrap;
+      overflow-y: scroll;
+      min-height: 20px;
+      max-height: 100px;
+      color: #111b21;
+      align-items: flex-start;
+      line-height: 20px;
+      img {
+        width: 20px;
+        height: 20px;
+        image-rendering: -webkit-optimize-contrast;
+      }
+      &:focus-visible {
+        outline: none;
+      }
+    }
+    & > img {
+      max-width: 24px;
+      margin-inline-end: 10px;
+      filter: invert(39%) sepia(13%) saturate(572%) hue-rotate(158deg) brightness(93%) contrast(88%);
+    }
+  }
+}

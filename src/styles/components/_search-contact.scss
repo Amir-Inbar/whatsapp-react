@@ -1,0 +1,32 @@
+.search-section {
+  padding: 10px 15px 10px 15px;
+  .search-contact {
+    border-radius: 8px;
+    position: relative;
+    background-color: #f0f2f5;
+    height: 35px;
+    input {
+      border-radius: 8px;
+      background-color: #f0f2f5;
+      padding: 10px 10px 10px 35px;
+      flex-grow: 1;
+      border: none;
+
+      &:focus-visible {
+        outline: none;
+      }
+    }
+    img {
+      max-width: 20px;
+      margin-left: 10px;
+    }
+    .search {
+      filter: invert(39%) sepia(13%) saturate(572%) hue-rotate(158deg)
+        brightness(93%) contrast(88%);
+    }
+    .arrow {
+      filter: invert(40%) sepia(73%) saturate(4568%) hue-rotate(154deg)
+        brightness(90%) contrast(86%);
+    }
+  }
+}

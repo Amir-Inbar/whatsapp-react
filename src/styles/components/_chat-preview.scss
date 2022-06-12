@@ -1,0 +1,42 @@
+.chat-preview {
+  min-height: 72px;
+  background: #fff;
+  cursor: pointer;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+
+  &:hover {
+    background-color: #f5f6f6;
+  }
+
+  &-profile {
+    align-self: center;
+    height: 49px;
+    width: 49px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-inline-end: 13px;
+    margin-inline-start: 15px;
+  }
+
+  &-desc {
+    padding: 15px 15px 15px 0px;
+    border-top: 1px solid $border-list;
+    font-family: $generalfontfamily;
+
+    &-contact {
+      font-weight: 400;
+      font-size: 17px;
+      color: #111b21;
+    }
+
+    &-last-resp {
+      font-size: 12px;
+      color: #667781;
+    }
+
+    &-last {
+      font-size: 14px;
+    }
+  }
+}

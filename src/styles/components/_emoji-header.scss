@@ -1,0 +1,27 @@
+.emoji-header {
+  width: 100%;
+  background-color: $background-header;
+  display: inline;
+  .emoji-category {
+    position: relative;
+    .emoji {
+      width: 100%;
+      position: relative;
+      & > img {
+        padding: 10px 0px;
+        max-width: 24px;
+      }
+    }
+    .border {
+      position: absolute;
+      bottom: 0;
+      transition: all .3s;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 11%;
+      height: 4px;
+      background-color: $emoji-bottom-border;
+    }
+  }
+}
