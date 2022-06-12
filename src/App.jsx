@@ -21,7 +21,7 @@ export const App = () => {
   const [logInUser, setLogInUser] = useState(null);
   const [isAddContact, setIsAddContact] = useState(false);
   const { auth, onAuthStateChanged } = firebaseAuth;
-
+  const num = 0;
   onAuthStateChanged(auth, async (user) => {
     if (user && !logInUser) {
       const { displayName, phoneNumber } = user;
