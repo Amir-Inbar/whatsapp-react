@@ -28,7 +28,6 @@ export const MainChat = () => {
     if (activeChatId) {
       chatService.getChatById(activeChatId, (data) => {
         if (data) {
-          console.log(data);
           setSelectChat(data)
         };
       });

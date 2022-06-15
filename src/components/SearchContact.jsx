@@ -15,6 +15,7 @@ export const SearchContact = () => {
           src={getImageUrl(`/icon/${toggleBtn()}.svg`)}
           onClick={() => setIsSearching(!isSearching)}
           className={toggleBtn()}
+          alt="search"
         />
         <input type="text" placeholder="Search or start new chat" className="full-grow" />
       </div>

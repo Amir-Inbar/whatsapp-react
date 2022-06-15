@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 import { chatService, msgFormat } from "../services/chat.service";
-import { getImageUrl } from "../services/util.service";
+import { getImageUrl, setCaret } from "../services/util.service";
 import { authService } from "../services/auth.service";
 import { eventBusService } from "../services/eventBus.service";
 
@@ -28,11 +28,10 @@ export const KeyBoard = () => {
     (async function () {
       if (inputData?.key === "Enter") {
         eventBusService.on("setSelectedChat", (data) => setActiveChatId(data));
-        console.log(inputData.msg);
         const userMsg = msgFormat("chat", inputData.msg, logInUser);
-        elKeyBoard.current.innerText = "";
         await chatService.sendMsg(userMsg, activeChatId);
-        setInputData();
+        elKeyBoard.current.innerHTML = "";
+        setInputData("");
       }
     })();
   }, [inputData]);
@@ -40,10 +39,12 @@ export const KeyBoard = () => {
   useEffect(() => {
     if (chatInputData) {
       const strHTML = `<img src=${getImageUrl(`/emoji/all-emoji/${chatInputData}`)}>`;
-      elKeyBoard.current.innerHTML += strHTML;
+      elKeyBoard.current.innerHTML += strHTML + " ";
+      setCaret(elKeyBoard);
       setInputData((prevFields) => ({ ...prevFields, ["msg"]: prevFields?.msg + chatInputData }));
     }
   }, [chatInputData]);
+
   return (
     <div className="chat-keyboard">
       <div className="user-keyboard flex align-center ">

@@ -7,22 +7,34 @@ export const utilService = {
   formatTime,
   getFileNames,
   getBase64FromUrl,
-  getFormattedTime
+  getFormattedTime,
 };
 
-export function getImageUrl(path, alt) {
-    try {
-        return require(`../assets${path}`);
-    } catch (err) {
-        if (alt) getImageUrl(alt);
-        return null;
-    }
+export function setCaret(el) {
+  el = el.current ? el.current : el;
+  const elCh = el.childNodes[el.childNodes.length - 1];
+  var range = document.createRange();
+  var sel = window.getSelection();
+  range.setStart(elCh, elCh.length);
+  range.collapse(true);
+  sel.removeAllRanges();
+  sel.addRange(range);
+  el.focus();
 }
 
-export function getFormattedTime (timestamp) {
+export function getImageUrl(path, alt) {
+  try {
+    return require(`../assets${path}`);
+  } catch (err) {
+    if (alt) getImageUrl(alt);
+    return null;
+  }
+}
+
+export function getFormattedTime(timestamp) {
   const d = new Date(timestamp);
   return getFormatTime(d.getHours()) + ":" + getFormatTime(d.getMinutes());
-};
+}
 
 export function getFormatTime(n) {
   return n < 10 ? "0" + n : n;
@@ -35,13 +47,11 @@ export function getBase64FromUrl(url) {
   return "data:image/PNG;base64," + base64;
 }
 
-const getBase64StringFromDataURL = (dataURL) =>
-  dataURL.replace("data:", "").replace(/^.+,/, "");
+const getBase64StringFromDataURL = (dataURL) => dataURL.replace("data:", "").replace(/^.+,/, "");
 
 export function makeId(length = 8) {
   var text = "";
-  var possible =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   for (var i = 0; i < length; i++) {
     text += possible.charAt(Math.floor(Math.random() * possible.length));
   }
@@ -98,24 +108,21 @@ export function getFileNames() {
           const idx = f.indexOf("-type-");
           const key = f.slice(0, idx);
 
-          if (emojiGroupMap[groupKey][key])
-            emojiGroupMap[groupKey][key].push(f);
+          if (emojiGroupMap[groupKey][key]) emojiGroupMap[groupKey][key].push(f);
           else emojiGroupMap[groupKey][key] = [f];
 
           return;
         }
 
-        if (emojiGroupMap[groupKey]["rest"])
-          emojiGroupMap[groupKey]["rest"].push(f);
+        if (emojiGroupMap[groupKey]["rest"]) emojiGroupMap[groupKey]["rest"].push(f);
         else emojiGroupMap[groupKey]["rest"] = [f];
       });
     });
 
     if (!f.includes("flag-for-")) {
-
       return;
     }
-   emojiGroupMap["flags"]["rest"] ? emojiGroupMap["flags"]["rest"].push(f) : emojiGroupMap["flags"]["rest"] = [f];
+    emojiGroupMap["flags"]["rest"] ? emojiGroupMap["flags"]["rest"].push(f) : (emojiGroupMap["flags"]["rest"] = [f]);
   });
 
   return emojiGroupMap;
@@ -1993,8 +2000,6 @@ export function getEmojiCodesMap() {
     ],
   };
 }
-
-
 
 export function getEmojis() {
   return {

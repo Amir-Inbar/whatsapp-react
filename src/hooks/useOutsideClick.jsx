@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect,useEffect } from "react";
+import { useRef,useEffect } from "react";
 
 export const useOutsideClick = (outSideCb,insideCb) => {
   const ref = useRef();

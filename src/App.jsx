@@ -14,14 +14,13 @@ import { EmojiList } from "./components/emoji/EmojiList/EmojiList";
 import { Registration } from "./pages/Registration";
 import { EmojiModal } from "./components/emoji/EmojiModal";
 import { SearchContact } from "./components/SearchContact";
-import { OverLayModal } from "./components/OverLayModal/OverLayModal";
+import { SideModal } from "./components/SideModal/SideModal";
 const queryClient = new QueryClient();
 
 export const App = () => {
   const [logInUser, setLogInUser] = useState(null);
-  const [isAddContact, setIsAddContact] = useState(false);
   const { auth, onAuthStateChanged } = firebaseAuth;
-  const num = 0;
+  
   onAuthStateChanged(auth, async (user) => {
     if (user && !logInUser) {
       const { displayName, phoneNumber } = user;
@@ -40,10 +39,10 @@ export const App = () => {
       {logInUser ? (
         <div className="App flex">
           <div className="left-side flex column">
-            <OverLayModal />
-            <ProfileHeader setIsAddContact={setIsAddContact} />
+            <SideModal />
+            <ProfileHeader  />
             <SearchContact />
-            <ChatList isAddContact={isAddContact} />
+            <ChatList />
           </div>
           <div className="right-side flex column">
             <ChatHeader />
