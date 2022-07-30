@@ -15,7 +15,11 @@
     }
 
     &__group {
-      padding: 15px 13px;
+      padding: 12px 13px;
+
+      &:hover{
+        background-color: var(--dropdown-background-hover);
+      }
 
       &--img {
         height: 48px;
@@ -23,7 +27,7 @@
         margin-inline-end: 15px;
       }
       &--title {
-        color: $message--primary;
+        color: var(--message--primary);
         font-size: 17px;
       }
     }
@@ -37,7 +41,7 @@
 //       margin: 20px 30px;
 //       background: transparent;
 //       border: none;
-//       border-bottom: 1px solid $border-list;
+//       border-bottom: 1px solid var(--border-list);
 //       line-height: 22px;
 //       outline: none;
 //       text-align: left;

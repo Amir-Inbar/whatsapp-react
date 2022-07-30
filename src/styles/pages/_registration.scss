@@ -1,5 +1,5 @@
 .register-page {
-  background-color: $background;
+  background-color: var(--background);
   font-family: $generalfontfamily;
   height: 100vh;
   @include for-mobile-layout {
@@ -9,7 +9,7 @@
     flex-grow: 3;
     .title {
       font-size: 2rem;
-      color: $emoji-bottom-border;
+      color: var(--emoji-bottom-border);
     }
     p {
       text-align: center;
@@ -19,11 +19,11 @@
       font-size: 2rem;
       .user-number {
         input {
-          border-bottom: 2px solid $input-bottom-border;
-          border-left: $background;
-          border-right: $background;
-          border-top: $background;
-          background-color: $background;
+          border-bottom: 2px solid var(--input-bottom-border);
+          border-left: var(--background);
+          border-right: var(--background);
+          border-top: var(--background);
+          background-color: var(--background);
           font-size: 1.5rem;
           padding: 0;
           text-align: center;
@@ -44,17 +44,17 @@
         }
       }
       .countries {
-        border-bottom: 2px solid $input-bottom-border;
-        border-left: $background;
-        border-right: $background;
-        border-top: $background;
+        border-bottom: 2px solid var(--input-bottom-border);
+        border-left: var(--background);
+        border-right: var(--background);
+        border-top: var(--background);
         font-size: 1.5rem;
         padding-bottom: 5px;
         margin-top: 10px;
         text-align: center;
         outline: none;
         scroll-behavior: smooth;
-        background-color: $background;
+        background-color: var(--background);
       }
       button {
         margin-top: 50px;
@@ -74,13 +74,13 @@
 
     // min-width: 650px;
     padding: 20px 100px;
-    border-left: 10px solid $mymessagebg;
-    background-color: $background;
+    border-left: 10px solid var(--mymessagebg);
+    background-color: var(--background);
     .title {
       font-size: 32px;
       font-weight: 300;
       line-height: 37.5px;
-      color: $app-title;
+      color: var(--app-title);
       border: none;
     }
     img {

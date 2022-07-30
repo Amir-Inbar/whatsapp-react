@@ -21,7 +21,7 @@ export async function sendMsg(msg, activeChatId) {
   return await firebaseService.sendMsg(API, msg, activeChatId);
 }
 
-export async function postChat(chat) {
+export async function addContactToChat(chat) {
   return await firebaseService.saveEntity(API, chat);
 }
 
@@ -42,8 +42,8 @@ export function msgFormat(type = "chat", body, user) {
   };
 }
 
-export function getEmptyChat(args) {
-  return { msgs: [], participants: [...args] };
+export function getEmptyChat() {
+  return { msgs: [], participants: [...arguments] };
 }
 
 export function getEmojiGroupsNames() {

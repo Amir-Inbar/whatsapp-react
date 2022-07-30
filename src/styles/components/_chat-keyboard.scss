@@ -1,6 +1,6 @@
 .chat-keyboard {
   min-height: 62px;
-  background-color: $background-header;
+  background-color: var(--background-header);
   padding: 0 15px 0 15px;
   width: 100%;
   display: block;
@@ -16,15 +16,15 @@
       margin: 7px 10px;
       font-size: 15px;
       font-weight: 400;
-      background-color: #fff;
-      border: 1px solid #fff;
+      background-color: var(--input-outline-order);
+      border: 1px solid var(--input-outline-order);
       border-radius: 8px;
       word-wrap: break-word;
       white-space: pre-wrap;
       overflow-y: scroll;
       min-height: 42px;
       max-height: 100px;
-      color: #111b21;
+      color: var(--fontcolor);
       align-items: flex-start;
       line-height: 20px;
       outline: none;

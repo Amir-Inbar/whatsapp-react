@@ -8,6 +8,7 @@
 @import 'basics/helpers';
 @import 'basics/base';
 @import 'basics/layout';
+@import 'basics/animation';
 
 // COMPONENTS
 @import "./components/chat-list";
@@ -28,6 +29,8 @@
 @import "./components/side-modal-settings";
 @import "./components/side-modal-contact";
 @import "./components/custom-input";
+@import "./components/dialog-modal";
+@import "./components/loader-app";
 
 //PAGES
 @import "./pages/chat-login";

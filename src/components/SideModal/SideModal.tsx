@@ -1,11 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, {useState } from "react";
 //@ts-ignore
 import { getImageUrl } from "../../services/util.service.js";
 //@ts-ignore
 import { eventBusService } from "../../services/eventBus.service.js";
 
 interface prop {
-  children: JSX.Element;
+  children: JSX.Element | undefined;
   key: string;
 }
 
@@ -18,9 +18,11 @@ export const SideModal = (): JSX.Element | null => {
     setTransformX("0");
   });
 
+  eventBusService.on("setSelectedChat",()=> onClose())
+
+
   const onClose = () => {
     setTransformX("-100%");
-    setElMain(null);
   };
 
   return (

@@ -5,15 +5,21 @@ export const userService = {
   getUsersById,
   getEmptyUser,
   getAllUsers,
-  // getUserByPhoneNum,
 };
 
 export async function getUsersById(queries = "", operator = "in") {
   return firebaseService.getEntityById(API, "docId", operator, queries);
 }
+
 export async function getAllUsers(user) {
   return firebaseService.getEntitys(API, "!=", user);
 }
+
+export async function getUserById(userId) {
+  const user = await firebaseService.getEntityById(API, "docId",'==',userId);
+  return user[0]
+}
+
 
 export async function getUserByPhoneNum(phonenNum) {
   const user = await firebaseService.getEntityById(API, "number", "==", phonenNum);

@@ -1,13 +1,13 @@
 .main-chat {
-  background-image: url("/assets/img/chat-bg.png");
-  background-color: $mainchatbg;
   order: 2;
-  overflow-y: scroll;
   margin-top: 59px;
   flex: 1 1 0;
   list-style: none;
 
+
   .chat-list {
+    height: 100%;
+    top: 0;
     padding-right: 6.5%;
     padding-left: 6.5%;
     align-items: flex-start;
@@ -16,24 +16,25 @@
     .message {
       font-size: 14.2px;
       line-height: 19px;
-      color: $message--primary;
-      box-shadow: 0 1px 0.5px rgba($msgshadow, 0.13);
+      color: var(--message--primary);
+      box-shadow: 0 1px 0.5px rgba(var(--msgshadow), 0.13);
       border-radius: 7.5px;
       user-select: text;
       padding: 6px 7px 8px 9px;
       position: relative;
+
       .inner-message {
         overflow-wrap: break-word;
         white-space: pre-wrap;
-
-        img{
+        max-width: 500px;
+        img {
           width: 20px;
           height: 20px;
           image-rendering: -webkit-optimize-contrast;
         }
       }
       .send-at {
-        color: $created-at-msg;
+        color: var(--created-at-msg);
         font-size: 0.6875rem;
       }
       .msg-triangle {
@@ -44,7 +45,7 @@
         height: 0;
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
-        border-top: 8px solid $mymessagebg;
+        border-top: 8px solid var(--mymessagebg);
       }
       .msg-triangle1 {
         position: absolute;
@@ -54,14 +55,14 @@
         height: 0;
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
-        border-top: 8px solid $incomingmessage;
+        border-top: 8px solid var(--incomingmessage);
       }
     }
     .msg-by-me {
-      background-color: $mymessagebg;
+      background-color: var(--mymessagebg);
     }
     .msg-by-other {
-      background-color: $incomingmessage;
+      background-color: var(--incomingmessage);
     }
     // }
   }

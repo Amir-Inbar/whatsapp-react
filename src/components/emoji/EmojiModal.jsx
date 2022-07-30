@@ -1,19 +1,20 @@
-import React, { useState, useLayoutEffect } from "react";
+import React, { useState, useLayoutEffect,useRef } from "react";
 
-import { useOutsideClick } from "../../hooks/useOutsideClick";
+import { UseOutsideClick } from "../../hooks/UseOutsideClick";
 import { eventBusService } from "../../services/eventBus.service";
 import { getImageUrl } from "../../services/util.service";
 
 export const EmojiModal = () => {
   const [modalPos, setModalPos] = useState({ display: "none" });
   const [emojiModal, setEmojiModal] = useState(null);
+  const ref = useRef()
 
   eventBusService.on("setEmojiModal", (data) => setEmojiModal(data));
 
   const outSideClick = () => {
     setModalPos({ display: "none" });
   };
-  const ref = useOutsideClick(outSideClick);
+  UseOutsideClick(ref,()=>outSideClick());
 
   useLayoutEffect(() => {
     if (emojiModal) {
@@ -28,6 +29,11 @@ export const EmojiModal = () => {
     }
   }, [emojiModal]);
 
+  const onSetChatInput = (emoji) => {
+    eventBusService.emit("onSetChatInput", emoji)
+    outSideClick()
+  }
+
   return (
     <>
       {emojiModal && (
@@ -38,7 +44,7 @@ export const EmojiModal = () => {
               alt={emoji}
               className="emoji-icon"
               key={idx}
-              onClick={() => eventBusService.emit("onSetChatInput", emoji)}
+              onClick={() =>onSetChatInput(emoji) }
             />
           ))}
           <span

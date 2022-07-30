@@ -10,21 +10,21 @@
         }
         span{
             &:nth-child(1){
-                color: $message--primary;
+                color: var(--message--primary);
                 font-size: 19px;
             }
             &:nth-child(2){
-                color: $fontstrong;
+                color: var(--fontstrong);
                 font-size: 15px;
             }
         }
     }
     &__icon{
-        color: $message--primary;
+        color: var(--message--primary);
         font-size: 17px;
         cursor: pointer;
         &:hover{
-            background-color: #f5f6f6;
+            background-color: var(--dropdown-background-hover);
         }
         &--img{
             height: 24px;
@@ -36,7 +36,7 @@
         &--title{
             width: 100%;
             padding:16px 0;
-            border-bottom: 1px solid $border-list ;
+            border-bottom: 1px solid var(--border-list) ;
         }
     }
   }

@@ -43,12 +43,12 @@
   
   @keyframes flicker {
     from {
-      background-color: $clr2;
-      color: $clrwht;
+      // background-color: $clr2;
+      // color: $clrwht;
     }
     to {
-      color: $clrwht;
-      background-color: $clr1;
+      // color: $clrwht;
+      // background-color: $clr1;
     }
   }
   
@@ -89,6 +89,18 @@
   
     to {
       transform: scale(1);
+    }
+  }
+  
+  @keyframes animate {
+    0% {
+      left: -100%;
+    }
+    40% {
+      left: 100%;
+    }
+    100% {
+      left: 100%;
     }
   }
   

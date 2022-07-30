@@ -1,6 +1,6 @@
 .emoji-header {
   width: 100%;
-  background-color: $background-header;
+  background-color: var(--background-header);
   display: inline;
   .emoji-category {
     position: relative;
@@ -21,7 +21,7 @@
       left: 0;
       width: 11%;
       height: 4px;
-      background-color: $emoji-bottom-border;
+      background-color: var(--emoji-bottom-border);
     }
   }
 }

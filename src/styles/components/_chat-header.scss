@@ -1,6 +1,6 @@
 .chat-header {
   height: 59px;
-  background-color: $background-header;
+  background-color: var(--background-header);
   order:1;
   position: absolute;
   top:0;
@@ -15,7 +15,7 @@
     }
   }
   .header-btns {
-    .search {
+    .search, .settings {
       margin-inline-end: 20px;
       max-width: 20px;
       filter: invert(39%) sepia(13%) saturate(572%) hue-rotate(158deg)

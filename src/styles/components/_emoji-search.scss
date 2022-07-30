@@ -2,7 +2,7 @@
   .search{
     padding:8px 12px;
     input{
-      background-color: $chatlistbg;
+      background-color: var(--chatlistbg);
       border: none;
       width: 100%;
       padding: 10px 12px;
