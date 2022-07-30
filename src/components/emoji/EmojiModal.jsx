@@ -1,6 +1,6 @@
 import React, { useState, useLayoutEffect,useRef } from "react";
 
-import { UseOutsideClick } from "../../hooks/UseOutsideClick";
+import { useOutsideClick } from "../../hooks/useOutsideClick";
 import { eventBusService } from "../../services/eventBus.service";
 import { getImageUrl } from "../../services/util.service";
 
@@ -14,7 +14,7 @@ export const EmojiModal = () => {
   const outSideClick = () => {
     setModalPos({ display: "none" });
   };
-  UseOutsideClick(ref,()=>outSideClick());
+  useOutsideClick(ref,()=>outSideClick());
 
   useLayoutEffect(() => {
     if (emojiModal) {

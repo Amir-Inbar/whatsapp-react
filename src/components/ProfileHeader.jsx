@@ -3,7 +3,7 @@ import React, { useState, useRef } from 'react'
 import { eventBusService } from '../services/eventBus.service'
 import { getImageUrl } from '../services/util.service'
 
-import { UseOutsideClick } from '../hooks/UseOutsideClick'
+import { useOutsideClick } from '../hooks/useOutsideClick'
 import { logout } from '../services/auth.service'
 import { useAddChat, UseLoadDBContact } from '../hooks/useChatData'
 
@@ -106,7 +106,7 @@ export const ProfileHeader = () => {
     setModalStyle({ display: 'none' })
   }
 
-  UseOutsideClick(ref, () => handleClickOutside())
+  useOutsideClick(ref, () => handleClickOutside())
 
   const handleInsideClick = (ev) => {
     const pos = ev.target.getBoundingClientRect()
