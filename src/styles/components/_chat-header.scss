@@ -1,0 +1,33 @@
+.chat-header {
+  height: 59px;
+  background-color: var(--background-header);
+  order:1;
+  position: absolute;
+  top:0;
+  z-index: 10;
+  width: 100%;
+  .profile-img {
+    padding: 0px 15px 0px 13px;
+    max-width: 68px;
+    img {
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+  .header-btns {
+    .search, .settings {
+      margin-inline-end: 20px;
+      max-width: 20px;
+      filter: invert(39%) sepia(13%) saturate(572%) hue-rotate(158deg)
+        brightness(93%) contrast(88%);
+    }
+  }
+  .contact-name {
+    font-size: 16px;
+    font-family: $generalfontfamily;
+  }
+  .contact-lastseen {
+    font-size: 13px;
+    font-family: $generalfontfamily;
+  }
+}

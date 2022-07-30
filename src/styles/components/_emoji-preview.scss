@@ -1,0 +1,23 @@
+.emoji-preview{
+    height: 320px;
+    overflow-y: scroll;
+    font-family: $generalfontfamily;
+    margin-block-end: 66px;
+    // position: relative;
+    .category{
+        padding: 5px 0 8px;
+        font-size: 14px;
+    }
+    .emoji-body-main{
+        overflow-y: scroll;
+        margin-inline-start: 15px;
+        .emoji-icon{
+            width: 32px;
+            height: 32px;
+            margin:6px;
+            cursor: pointer;
+        }
+    }
+    
+   
+}

@@ -1,0 +1,40 @@
+.side-modal {
+  z-index: 10;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: transform 1.2s;
+  font-family: $generalfontfamily;
+
+  &__header {
+    font-size: 19px;
+    height: 108px;
+    line-height: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 500;
+    background-color: var(--emoji-bottom-border);
+
+    &__close {
+      padding-block-end: 17px;
+    }
+    
+    &--img {
+      max-height: 24px;
+      max-width: 80px;
+    }
+
+    span {
+      color: var(--settings-header-title);
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__main {
+    overflow-y: auto;
+    flex: 1;
+    background-color: var(--regular-white);
+  }
+}

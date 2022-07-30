@@ -1,0 +1,90 @@
+// COLOR PALETTE
+// $clr4: darken($clr3, 40%);
+
+:root {
+  --dialong-bg: #fff;
+  --regular-white: #fff;
+  --arrow-search: #00a884;
+  --background: #f8f8f8;
+  --background-app:#efeae2;
+  --background-header: #f0f2f5;
+  --fontstrong: #667781;
+  --chatlistbg: #e9edef;
+  --mainchatbg: #efeae2;
+  --fontcolor: #075e54;
+  --border-list: #e9edef;
+  --message--primary: #111b21;
+  --mymessagebg: #d9fdd3;
+  --msgshadow: rgb(11, 20, 26);
+  --incomingmessage: #fff;
+  --created-at-msg: #667781;
+  --main-chat-color: #3b4a54;
+  --settings-header-title: #ffffff;
+  --input-bg: #f0f2f5;
+  --app-bg: #eae6df;
+  --app-bg-deeper: #d1d7db;
+  --emoji-bottom-border: #008069;
+  --app-title: #41525d;
+  --input-bottom-border: #00a884;
+  --icon: #54656f;
+  --dropdown-background-hover: #f5f6f6;
+  --input-outline-order: #ffffff;
+  --header-border-right: #ced0d1;
+  --background-img: url('../../assets/img/chat-bg.png');
+  --bottom-line:#25d366;
+}
+
+:root[data-color-scheme='dark'] {
+  --background-app:#0b141a;
+  --dialong-bg: #3b4a54;
+  --regular-white: #111b21;
+  --arrow-search: #00a884;
+  --background: #222e35; 
+  --background-header: #202c33;
+  --fontstrong: #8696a0;
+  --chatlistbg: #202c33;
+  --mainchatbg: #0b141a;
+  --fontcolor: #d1d7db;
+  --border-list: rgba(134, 150, 160, 0.15);
+  --message--primary: #fff;
+  --mymessagebg: #005c4b;
+  --msgshadow: rgb(11, 20, 26);
+  --incomingmessage: #202c33;
+  --created-at-msg: hsla(0, 0%, 100%, 0.6);
+  --main-chat-color: #d1d7db;
+  --input-bg: #202c33;
+  --input-outline-order: #2a3942;
+  --header-border-right: #202c33;
+  --app-bg: #eae6df;
+  --app-bg-deeper: #d1d7db;
+  --emoji-bottom-border: #202c33;
+  --app-title: #41525d;
+  --input-bottom-border: #00a884;
+  --icon: #54656f;
+  --dropdown-background-hover: #202c33;
+  --settings-header-title: #d9dee0;
+  --background-img: url('../../assets/img/bg-chat-dark.png');
+  --bottom-line:rgb(0, 128, 105);
+}
+
+//    var(--dropdown-background-hover)
+$clr1: #891826;
+$clr2: #ba1628;
+$clr3: #9c3842;
+$clr4: #f7f3f0;
+
+$generalfontfamily: Segoe UI, Helvetica Neue, Helvetica, Lucida Grande, Arial, Ubuntu, Cantarell, Fira Sans, sans-serif;
+$base-border-radius: 100%;
+$base-padding: 10px;
+
+// LAYOUT
+$layoutPadding: 20px;
+
+// LAYOUT BREAKPOINTS
+$break-narrow: 780px;
+$break-normal: 1360px;
+$break-wide: 1920px;
+
+$padded-break-narrow: $break-narrow + $layoutPadding * 2;
+$padded-break-normal: $break-normal + $layoutPadding * 2;
+$padded-break-wide: $break-wide + $layoutPadding * 2;
