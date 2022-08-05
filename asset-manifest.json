@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/whatsapp-react/static/css/main.c162e402.css",
-    "main.js": "/whatsapp-react/static/js/main.48737db7.js",
+    "main.js": "/whatsapp-react/static/js/main.172aa1cd.js",
     "static/js/787.2b7c45ff.chunk.js": "/whatsapp-react/static/js/787.2b7c45ff.chunk.js",
     "static/media/Helvetica-700.ttf": "/whatsapp-react/static/media/Helvetica-700.ed57aca7292971d8548c.ttf",
     "static/media/whatsapp-web-emojis-2017.jpg": "/whatsapp-react/static/media/whatsapp-web-emojis-2017.938bc3e8f5b4c6f9e6f8.jpg",
@@ -59,11 +59,11 @@
     "static/media/arrow.svg": "/whatsapp-react/static/media/arrow.f04d5da1b27c26f5f852.svg",
     "static/media/arrow-settings.svg": "/whatsapp-react/static/media/arrow-settings.d68eef4c3731f65bc471.svg",
     "main.c162e402.css.map": "/whatsapp-react/static/css/main.c162e402.css.map",
-    "main.48737db7.js.map": "/whatsapp-react/static/js/main.48737db7.js.map",
+    "main.172aa1cd.js.map": "/whatsapp-react/static/js/main.172aa1cd.js.map",
     "787.2b7c45ff.chunk.js.map": "/whatsapp-react/static/js/787.2b7c45ff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c162e402.css",
-    "static/js/main.48737db7.js"
+    "static/js/main.172aa1cd.js"
   ]
 }
